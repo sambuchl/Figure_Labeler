@@ -1,0 +1,29 @@
+project_name/
+│
+├── data/
+│   ├── raw_data/           # Raw data files (e.g., CSV, JSON, XML)
+│   ├── processed_data/     # Processed data files (e.g., cleaned and transformed)
+│   └── metadata/           # Metadata files (e.g., data descriptions, schema)
+│
+├── src/                     # Source code directory
+│   ├── main.py              # Main application entry point
+│   ├── modules/             # Custom Python modules
+│   ├── utils/               # Utility functions and classes
+│   └── tests/               # Unit tests for code
+│
+├── config/                  # Configuration files
+│   ├── config.yaml          # Application configuration
+│   ├── logging.yaml         # Logging configuration
+│   └── ...
+│
+├── notebooks/               # Jupyter notebooks for exploration and documentation
+│
+├── docs/                    # Project documentation (e.g., README, API documentation)
+│
+├── requirements.txt         # List of Python dependencies
+│
+├── environment.yml          # Conda environment file (if using Conda)
+│
+├── LICENSE                  # License file (e.g., MIT, Apache)
+│
+└── .gitignore               # Gitignore file to specify which files/folders to ignore
