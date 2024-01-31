@@ -1,5 +1,6 @@
 import os
 import mimetypes
+from datetime import datetime
 
 def get_image_types_and_counts(directory):
     image_extensions = set()
@@ -24,15 +25,26 @@ def get_image_types_and_counts(directory):
 
     return image_extensions, total_image_count, directory_counts
 
-def print_formatted_table(directory_counts):
-    print(f"{'Directory':<20} | {'Image Count':>12}")
-    print("-" * 35)
+def print_formatted_table(directory_counts, file):
+    file.write(f"{'Directory':<20} | {'Image Count':>12}\n")
+    file.write("-" * 35 + "\n")
     for dir_name, count in directory_counts.items():
-        print(f"{dir_name:<20} | {count:>12}")
+        file.write(f"{dir_name:<20} | {count:>12}\n")
 
-directory = '/Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/data/ACL-fig/training_data/train'
+directory = '/Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/Figure_Labeler/data/ACL-fig/training_data/train'
 image_types, total_images, directory_counts = get_image_types_and_counts(directory)
 
-print_formatted_table(directory_counts)
-print(f"\nTotal images processed: {total_images}")
-print("Image types found:", image_types)
+# Get current date and time
+current_datetime = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+# File to save the results
+output_file_path = f'image_class_report_{current_datetime}.txt'
+
+with open(output_file_path, 'w') as file:
+    file.write(f"Report generated on {current_datetime}\n")
+    file.write(f"Source Folder: {directory}\n\n")
+    print_formatted_table(directory_counts, file)
+    file.write(f"\nTotal images processed: {total_images}\n")
+    file.write("Image types found: " + ", ".join(image_types) + "\n")
+
+print(f"Report saved to {output_file_path}")

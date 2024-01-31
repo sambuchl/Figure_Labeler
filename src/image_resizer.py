@@ -37,8 +37,8 @@ def center_image_on_canvas(image, canvas_size):
     canvas.paste(image, (x, y))
     return canvas
 
-root_directory = '/Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/data/ACL-fig/training_data/train'
-save_directory = '/Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/data/ACL-fig/training_data/train_resized'
+root_directory = '/Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/Figure_Labeler/data/ACL-fig/training_data/train'
+save_directory = '/Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/Figure_Labeler/data/ACL-fig/training_data/train_resized'
 
 max_width, max_height = find_max_size(root_directory)
 canvas_size = make_canvas_size(max_width, max_height)

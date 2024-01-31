@@ -1,0 +1,28 @@
+Report generated on 20240130_201952
+Source Folder: /Users/m041946/Documents/2024-1-Winter/AIHC-5010/final_project/Figure_Labeler/data/ACL-fig/training_data/train
+
+Directory            |  Image Count
+-----------------------------------
+maps                 |           30
+.ipynb_checkpoints   |            3
+tables               |           61
+scatter plot         |           40
+word cloud           |           14
+Screenshots          |           61
+trees                |          131
+boxplots             |           22
+NLP text_grammar_eg  |           61
+architecture diagram |           63
+pie chart            |           60
+confusion matrix     |           70
+graph                |           64
+algorithms           |           60
+bar charts           |           61
+pareto               |            2
+Line graph_chart     |           61
+venn diagram         |            5
+neural networks      |           61
+natural images       |           75
+
+Total images processed: 1089
+Image types found: .png
